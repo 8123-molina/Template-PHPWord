@@ -71,7 +71,7 @@
             //'borderColor' => '006699', 
             'alignment' => \PhpOffice\PhpWord\SimpleType\JcTable::START, //Justifica a direita
         );
-        $widthCell = 10000;
+        $widthCell = 10000; // Comprimento inicial da celula
         $fancyTableFontStyle = array('size' => 10,'bold' => true);
         $fancyTableCellStyle = array('valign' => 'center');
         $fancyTableCellBtlrStyle = array('valign' => 'center', 'textDirection' => \PhpOffice\PhpWord\Style\Cell::TEXT_DIR_LRTB); //Justifica conteudo a direita da celula
@@ -202,7 +202,7 @@
     
     
     
-    //Cria a tabela Dados Dados Técnicos Hidrológicos
+    //Cria a tabela Dados Dados Técnicos Externos
         $section->addTextBreak(1);
         $section->addText('Dados Técnicos Externos', $TitleSecundary);
         
@@ -230,7 +230,7 @@
 
             $table->addRow(90);
             $table->addCell($widthCell)->addText('RNs:', $fancyTableFontStyle);
-            $table->addCell($widthCell)->addText($checklist->rn);
+            $table->addCell($widthCell)->addText($dados->rn);
             $table->addCell($widthCell)->addText('tipo graxa:', $fancyTableFontStyle);
             $table->addCell($widthCell)->addText($dados->tipo_graxa);
             
